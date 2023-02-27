@@ -1,0 +1,25 @@
+.input {
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    font-size: 1.4rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+datalist {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+
+option {
+    padding: 5px;
+    font-size: 5rem;
+    border: none;
+}
