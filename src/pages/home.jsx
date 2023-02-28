@@ -9,18 +9,22 @@ import DatePicker from "../components/datePicker/datePicker";
 
 const Home = (prop) =>
 {
-	var today = new Date();
-	var dd = String(today.getDate()).padStart(2, '0');
-	var mm = String(today.getMonth() + 1).padStart(2, '0');
-	var yyyy = today.getFullYear();
+	// var today = new Date();
+	// var dd = String(today.getDate()).padStart(2, '0');
+	// var mm = String(today.getMonth() + 1).padStart(2, '0');
+	// var yyyy = today.getFullYear();
 
-	today = yyyy + '-' + mm + '-' + dd;
+	// today = yyyy + '-' + mm + '-' + dd;
+
+	let today = new Date(new Date().toString().split('GMT')[0]+' UTC').toISOString()
+
+
 	const [getTemperature, setTemperature] = useState([{}])
 	const [getMaxTemperature, setMaxTemperature] = useState([{}])
 	const [getMinTemperature, setMinTemperature] = useState([{}])
 	const [getHumidity, setHumidity] = useState([{}])
 	const [getWindSpeed, setWindSpeed] = useState([{}])
-	const [getEndDate, setEndDate] = useState(today)
+	const [getEndDate, setEndDate] = useState('')
 	const [getSearchValue, setSearchValue] = useState({})
 
 	let searchHandler = async (searchValue) => {

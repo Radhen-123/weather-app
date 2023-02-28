@@ -9,13 +9,13 @@ const DatePicker = ({onDateChange}) => {
 
 	today = yyyy + '-' + mm + '-' + dd;
 	const onDateChangeHandler = () => {
-		// console.log(timeRef.current.value)
+		console.log(timeRef.current.value)
 		onDateChange(timeRef.current.value)
 	}
   return (
 	  <div className={styles.container}>
-		  <input type="date" id="startDate" disabled={true} value={today}/>
-		  <input type="date" id="endDate" ref={timeRef} onChange={onDateChangeHandler} min={today}/>
+		  <input type="datetime-local" id="startDate" disabled={true} value={today}/>
+		  <input type="datetime-local" id="endDate" ref={timeRef} onChange={onDateChangeHandler} min={today}/>
 	  </div>
   )
 }
